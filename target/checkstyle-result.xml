@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="8.45.1">
+<file name="C:\Users\ridzu\NUS-ISS TFIP\Day9\scipaperstone\src\main\java\day9_scipaperstone\App.java">
+<error line="1" column="9" severity="error" message="Name &apos;day9_scipaperstone&apos; must match pattern &apos;^[a-z]+(\.[a-z][a-z0-9]*)*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.PackageNameCheck"/>
+</file>
+<file name="C:\Users\ridzu\NUS-ISS TFIP\Day9\scipaperstone\src\test\java\day9_scipaperstone\AppTest.java">
+<error line="1" column="9" severity="error" message="Name &apos;day9_scipaperstone&apos; must match pattern &apos;^[a-z]+(\.[a-z][a-z0-9]*)*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.PackageNameCheck"/>
+</file>
+</checkstyle>
