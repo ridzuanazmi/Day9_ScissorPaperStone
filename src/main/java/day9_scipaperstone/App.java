@@ -3,18 +3,10 @@ package day9_scipaperstone;
 import java.util.Random;
 import java.util.Scanner;
 
-/**
- * Hello world!
- */
 public final class App {
     private App() {
     }
 
-    /**
-     * Says hello to the world.
-     * 
-     * @param args The arguments of the program.
-     */
     public static void main(String[] args) {
         // String[] choice = { "scissor", "paper", "stone" };
         Scanner scanner = new Scanner(System.in);
@@ -31,7 +23,10 @@ public final class App {
             String pChoice = scanner.next();
             Integer playerChoice = Integer.parseInt(pChoice) - 1;
 
-            // find out who is the winner or a draw
+            /* 
+            Finds out who is the winner or a draw. counts the number of games,
+            wins and draw.
+            */
             if (playerChoice >= 0 && playerChoice <= 2) {
                 switch (comChoice) {
                     case 0:
