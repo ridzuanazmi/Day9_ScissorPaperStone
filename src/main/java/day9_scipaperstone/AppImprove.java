@@ -6,6 +6,14 @@ import java.util.Scanner;
 public class AppImprove {
 
     public static void main(String[] args) {
+
+        play();
+
+    } // end of main
+
+    public static void play() {
+
+        // Boolean playing = true;
         Scanner scanner = new Scanner(System.in);
         // boolean playing = true;
         // int counter = 0, counterP = 0, counterC = 0, counterDraw = 0;
@@ -20,16 +28,15 @@ public class AppImprove {
         Integer playerChoice = Integer.parseInt(pChoice) - 1;
         scanner.close();
 
-        checkWinner(playerChoice, comChoice);
+        if (checkDraw(playerChoice, comChoice)) {
+            System.out.println("Game is a draw!");
+        } else {
+            checkWinner(playerChoice, comChoice);
+        }
 
-    } // end of main
+    } // end of play method
 
     public static void checkWinner(Integer playerChoice, Integer comChoice) {
-
-        if (playerChoice.equals(comChoice)) {
-            System.out.println("Game is a draw");
-            return;
-        }
 
         switch (comChoice) {
             case 0:
@@ -46,11 +53,19 @@ public class AppImprove {
 
             case 2:
                 if (playerChoice == 1)
-                    System.out.println("Computer wins!");
-                else
                     System.out.println("Player wins!");
+                else
+                    System.out.println("Computer wins!");
 
         }
     } // End of checkWinner method
 
+    public static Boolean checkDraw(Integer playerChoice, Integer comChoice) {
+
+        if (playerChoice.equals(comChoice)) {
+            return true;
+        }
+        return false;
+    }
+ 
 } // end of AppImprove class
